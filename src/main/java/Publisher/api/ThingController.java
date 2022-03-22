@@ -1,7 +1,7 @@
-package com.example.MyWebService.api;
+package Publisher.api;
 
-import com.example.MyWebService.model.Thing;
-import com.example.MyWebService.service.ThingService;
+import Publisher.model.Thing;
+import Publisher.service.ThingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,7 +20,7 @@ public class ThingController {
     }
 
     @GetMapping("/things/{id}")
-    public Thing getThing(@PathVariable int id)
+    public Thing getThing(@PathVariable Long id)
     {
         return thingService.getThingById(id);
     }
@@ -29,6 +29,24 @@ public class ThingController {
     public List<Thing> getAllThings()
     {
         return thingService.getAllThings();
+    }
+
+    @GetMapping("/things/test")
+    public String test()
+    {
+        return "test method heard you";
+    }
+
+    @GetMapping("/pokemon/{name}")
+    public String testClient(@PathVariable String name)
+    {
+        return thingService.getPokemonTypeByName(name);
+    }
+
+    @GetMapping("/thing/describe")
+    public String describeImage(@PathVariable String url)
+    {
+        return thingService.getImageDescription(url);
     }
 
 

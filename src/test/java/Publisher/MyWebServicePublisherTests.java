@@ -1,10 +1,10 @@
-package com.example.MyWebService;
+package Publisher;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MyWebServiceApplicationTests {
+class MyWebServicePublisherTests {
 
 	@Test
 	void contextLoads() {

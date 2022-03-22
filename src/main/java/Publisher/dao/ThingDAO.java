@@ -1,6 +1,6 @@
-package com.example.MyWebService.dao;
+package Publisher.dao;
 
-import com.example.MyWebService.model.Thing;
+import Publisher.model.Thing;
 
 import java.util.List;
 
